@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+body{
+    background-color: rgba(113, 116, 119, 0.479);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.dadosUsuarios{
+    text-align: center;
+    border: 0px solid white;
+    border-top: 7px solid rgba(38, 194, 147, 0.986);
+    padding: 1.3rem 2rem;
+    background-color: white;
+}
+
+input[type="text"]{
+    padding: 0.5rem 1.3rem;
+    background-color: rgba(211, 211, 211, 0.527);
+    border: 1px solid rgba(211, 211, 211, 0.527);
+}
+
+.botaoEnviar{
+    color: white;
+    background-color: rgba(38, 194, 147, 0.986);
+    padding: 0.4rem 5.5rem;
+    box-shadow: rgba(38, 194, 147, 0.685);
+}

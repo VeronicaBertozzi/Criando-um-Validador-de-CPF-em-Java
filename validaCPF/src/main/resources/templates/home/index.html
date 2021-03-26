@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script>
+        const validaCampos = function () {
+            if (document.getElementById("nome").value == "") {
+                document.getElementById("erro").innerHTML = "Preencha o campo nome";
+                document.getElementById("nome").focus();
+                document.getElementById("erro").style.display = "block";
+                return false;
+            }
+
+            if (document.getElementById("cpf").value == "") {
+                document.getElementById("erro").innerHTML = "Preencha o campo cpf";
+                document.getElementById("erro").style.display = "block";
+                document.getElementById("cpf").focus();
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title>Validador de CPF</title>
+</head>
+
+<body>
+    <form method="GET" action="/validaCpf">
+        <div class="dadosUsuarios">
+            <fieldset id="dadosPessoais">
+                <h3>Validador de CPF</h3>
+                <div class="nome">
+                    <label for="nomeUsuario"></label></br><input type="text" name="nome" id="nomeUsuario" size="20"
+                        placeholder="Digite o seu nome" required>
+                </div>
+                <div class="cpf">
+                    <label for="cpfUsuario"></label></br><input type="text" name="cpf" id="cpfUsuario" size="20"
+                        placeholder="Digite seu CPF" required>
+                </div>
+            </fieldset></br>
+            <button type="submit" class="botaoEnviar">Enviar</button>
+        </div>
+    </form>
+</body>
+
+</html>
